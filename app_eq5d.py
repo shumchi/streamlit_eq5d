@@ -9,6 +9,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import plotly.figure_factory as ff
+import researchpy as rp
 
 
 # -- Set page config
@@ -154,8 +155,8 @@ st.dataframe(df[raw_names])
 
 
 
-st.subheader("3: Dowload the result")
-st.text("You can click the botton below to download the result")
+st.subheader("3: Download the result")
+st.text("You can click the button below to download the result")
 @st.cache
 def convert_df(df):
     return df.to_csv(index=False).encode('utf-8')
@@ -188,7 +189,6 @@ st.plotly_chart(fig, use_container_width=True)
 
 st.subheader("6: Summary table")
 
-import researchpy as rp
 
 tab = rp.summary_cat(df[["mo", "sc", "ua", "pd", "ad"]])
 
