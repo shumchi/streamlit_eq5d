@@ -24,13 +24,24 @@ st.set_page_config(page_title=apptitle, page_icon=":eyeglasses:")
 
 html_title = """
     <div style="background-color:orange;"><p style="color:white; font-size:40px; padding:10px; text-align:center; font-family:times">
-    A tool to calculate <br> EQ-5D-3L/5L Scale's Utility
+    A tool to calculate <br> EQ-5D-3L/5L Scale's Utility <br> (Chinese Version Only)
     </p></div>
     """
     
 st.markdown(html_title, unsafe_allow_html=True)
 
+st.subheader("Tutorial")
+st.markdown("""
 
+- Step 1: Select a scale (3L or 5l) in the sidebar.
+
+- Step 2: Select the Value set.
+
+- Step 3: Upload your csv file.
+
+- Step 4: Click the Download button to download the result. 
+
+""")
 
 
 # Select scale
