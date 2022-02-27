@@ -69,7 +69,7 @@ bins = st.sidebar.slider("Bins of Histogram", 0.01, 0.2, 0.05)  # min, max, defa
 # File upload
 
 st.subheader("1: Please upload your data")
-st.text("Attention: the file must be a CSV format and contains \n at least five variable named 'mo, sc, ua, pd, ad'")
+st.text("Attention: the file must be a CSV format and contains \n at least five variables named 'mo, sc, ua, pd, ad'")
 
 
 data_file = st.file_uploader("Upload CSV", type=["csv"])
