@@ -75,6 +75,10 @@ st.text("Attention: the file must be a CSV format and contains \n at least five 
 data_file = st.file_uploader("Upload CSV", type=["csv"])
 
 
+if data_file is None:
+    df = pd.read_csv("./dataset/test_set_3l.csv")
+    raw_names = df.columns.tolist()
+
 if data_file is not None:
     
     file_details = {"filename": data_file.name, 
@@ -83,10 +87,8 @@ if data_file is not None:
     st.write(file_details)
     data = pd.read_csv(data_file)
     st.dataframe(data)
-
-
-df = data
-raw_names = df.columns.tolist()
+    df = data
+    raw_names = df.columns.tolist()
 
 #---Loading data---#
 
@@ -187,7 +189,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 #- Figure---#
 
-st.subheader("6: Summary table")
+st.subheader("5: Summary table")
 
 
 tab = rp.summary_cat(df[["mo", "sc", "ua", "pd", "ad"]])
