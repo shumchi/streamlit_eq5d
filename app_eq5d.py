@@ -218,16 +218,19 @@ st.markdown("""
 
 - *Luo_2017* means: Luo, N. ,  Liu, G. ,  Li, M. ,  Guan, H. ,  Jin, X. , &  Rand-Hendriksen, K. . (2017). Estimating an eq-5d-5l value set for china. Value in Health, 20(4), 662-669.
 
+""")
 
-\n
-\n
 
-**Author Info:** \n
+
+st.sidebar.markdown("### Author Info:")
+st.sidebar.markdown(
+"""
 *Shen, Chi*; \n
 *chi.shen@xjtu.edu.cn;* \n
 *School of Public Policy and Administration;* \n
 *Xi'an Jiaotong University*
-""")
+"""
+)
 
 
 
